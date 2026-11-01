@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "description": "人工値による算術検証専用。法令・規程の適合判断には使用禁止。",
+  "cases": [
+    {
+      "id": "P01",
+      "kind": "singlePhaseCurrent",
+      "input": {
+        "voltageV": 100,
+        "inputPowerW": 1000,
+        "powerFactor": 1
+      },
+      "expected": {
+        "currentA": 10
+      }
+    },
+    {
+      "id": "P02",
+      "kind": "singlePhaseCurrent",
+      "input": {
+        "voltageV": 200,
+        "inputPowerW": 2000,
+        "powerFactor": 0.8
+      },
+      "expected": {
+        "currentA": 12.5
+      }
+    },
+    {
+      "id": "P03",
+      "kind": "threePhaseCurrent",
+      "input": {
+        "voltageV": 200,
+        "inputPowerW": 3000,
+        "powerFactor": 1
+      },
+      "expected": {
+        "currentA": 8.660254037844387
+      }
+    },
+    {
+      "id": "P04",
+      "kind": "threePhaseCurrent",
+      "input": {
+        "voltageV": 400,
+        "inputPowerW": 4000,
+        "powerFactor": 0.8
+      },
+      "expected": {
+        "currentA": 7.216878364870321
+      }
+    },
+    {
+      "id": "P05",
+      "kind": "threePhaseMotor",
+      "input": {
+        "mechanicalOutputW": 3000,
+        "efficiency": 0.9,
+        "voltageV": 200,
+        "powerFactor": 0.8
+      },
+      "expected": {
+        "electricalInputW": 3333.333333333333,
+        "currentA": 12.028130608117202
+      }
+    },
+    {
+      "id": "V01",
+      "kind": "singlePhaseVoltageDrop",
+      "input": {
+        "currentA": 10,
+        "lengthKm": 0.1,
+        "resistanceOhmPerKm": 1,
+        "reactanceOhmPerKm": 0,
+        "powerFactor": 1
+      },
+      "expected": {
+        "dropV": 2
+      }
+    },
+    {
+      "id": "V02",
+      "kind": "threePhaseVoltageDrop",
+      "input": {
+        "currentA": 10,
+        "lengthKm": 0.1,
+        "resistanceOhmPerKm": 1,
+        "reactanceOhmPerKm": 0,
+        "powerFactor": 1
+      },
+      "expected": {
+        "dropV": 1.7320508075688772
+      }
+    }
+  ]
+}
