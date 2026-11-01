@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "description": "Phase 0 source register. No source has been validated.",
+  "sources": [],
+  "statusVocabulary": [
+    "unverified",
+    "source-checked",
+    "validated",
+    "superseded",
+    "blocked"
+  ]
+}
