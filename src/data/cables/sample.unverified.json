@@ -1,0 +1,16 @@
+{
+  "note": "Schema example only. Not approved for engineering calculations.",
+  "records": [
+    {
+      "id": "CV-2SQ-3C",
+      "type": "CV",
+      "size": 2,
+      "sizeUnit": "mm2",
+      "cores": 3,
+      "displayName": "CV - 2sq - 3C",
+      "outerDiameterMm": null,
+      "resistanceOhmPerKm": null,
+      "sourceStatus": "unverified"
+    }
+  ]
+}
